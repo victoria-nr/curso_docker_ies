@@ -28,7 +28,7 @@ docker run -d -p 8080:80 --name mediawiki1 mediawiki
 
 Si accedemos a la ip de nuestro ordenador, al puerto 8080, podemos observar que hemos instalado la versión 1.39.1:
 
-![mediawiki](img/mediawiki139.png)
+![mediawiki](img/mediawiki1.40.1.png)
 
 A continuación vamos a instalar otra versión de la mediawiki, la 1.38.5, creamos otro contenedor con otro nombre y mapeamos otro puerto:
 
