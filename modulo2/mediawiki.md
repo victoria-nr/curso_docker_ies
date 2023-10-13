@@ -1,6 +1,6 @@
 # Ejemplo: Desplegando la aplicación mediawiki
 
-La mediawiki en una aplicación web escrita en PHP que nos permite gestionar una wiki. En este ejemplo vamos a hacer un ejemplo simple de despliegue en contenedor usando la imagen [`mediawiki`](https://hub.docker.com/_/mediawiki) que encontramos en DockerHub. 
+La mediawiki en una aplicación web escrita en PHP que nos permite gestionar una wiki. En este caso vamos a hacer un ejemplo simple de despliegue en contenedor usando la imagen [`mediawiki`](https://hub.docker.com/_/mediawiki) que encontramos en DockerHub. 
 
 En este ejemplo nos vamos a fijar cómo por medio de la etiqueta del nombre de la imagen podemos tener distintas versiones de la aplicación.
 
@@ -8,13 +8,13 @@ En concreto, si estudiamos la [documentación](https://hub.docker.com/_/mediawik
 
 ## La etiqueta `latest`
 
-Si utilizamos el nombre de una imagen sin indicar la etiqueta, se toma por defecto la etiqueta `latest` que suele corresponder a la última versión de la aplicación. en el caso concreto de `mediawiki` observamos que la etiqueta `latest` corresponde a la última versión la `1.39.1`. Es más, podemos usar las siguientes etiquetas para indicar la misma versión: `1.39.1, 1.39, stable, latest`.
+Si utilizamos el nombre de una imagen sin indicar la etiqueta, se toma por defecto la etiqueta `latest` que suele corresponder a la última versión de la aplicación. en el caso concreto de `mediawiki` observamos que la etiqueta `latest` corresponde a la última versión la `1.40.1`. Es más, podemos usar las siguientes etiquetas para indicar la misma versión: `1.40.1, 1.40, stable, latest`.
 
 ## Las imágenes bases y la arquitectura también son indicadas con las etiquetas
 
-Podemos seguir observando que algunas etiquetas, nos indican además de la versión, los servicios que tienen instalada la imagen, por ejemplo si usamos la etiqueta `1.39.1-fpm` estaremos creando un contenedor con la ultima versión de la aplicación pero que además tendrá un servidor de aplicaciones php-fpm para servir la aplicación.
+Podemos seguir observando que algunas etiquetas, nos indican además de la versión, los servicios que tiene instalada la imagen, por ejemplo si usamos la etiqueta `1.40.1-fpm` estaremos creando un contenedor con la ultima versión de la aplicación pero que además tendrá un servidor de aplicaciones php-fpm para servir la aplicación.
 
-Otro ejemplo: si usamos la etiqueta `1.39.1-fpm-alpine`, además de la última versión y que tiene instalado php-fpm, nos indica que la imagen base que se ha usado para crear la imagen es una distribución `alpine` que se caracteriza por ser una distribución muy liviana.
+Otro ejemplo: si usamos la etiqueta `1.40.1-fpm-alpine`, además de la última versión y que tiene instalado php-fpm, nos indica que la imagen base que se ha usado para crear la imagen es una distribución `alpine` que se caracteriza por ser una distribución muy liviana.
 
 ## Instalación de distintas versiones de la mediawiki
 
