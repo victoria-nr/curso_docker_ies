@@ -24,7 +24,7 @@ ec77cfd20583        bridge              bridge              local
 
     Veamos un ejemplo:
 
-    Vamos a crear un contenedor interactivos con la imagen `debian`:
+    Vamos a crear un contenedor interactivo con la imagen `debian`:
 
     ```bash
     $ docker run -it --name contenedor1 --rm debian bash
