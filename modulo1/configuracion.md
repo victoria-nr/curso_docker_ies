@@ -77,7 +77,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 816ea7df5c41        mariadb             "docker-entrypoint.s…"   3 seconds ago       Up 2 seconds        0.0.0.0:3306->3306/tcp   some-mariadb
 ```
 
-Ahora desde nuestro equipo (donde hemos instalado un cliente de mysql) nos conectamos  que tiene la ip `192.168.121.54` vamos a conectarnos a la base de datos (hay que tener instalado el cliente de mariadb):
+Ahora desde nuestro equipo (donde hemos instalado un cliente de mysql) que tiene la ip `192.168.121.54` vamos a conectarnos a la base de datos (hay que tener instalado el cliente de mariadb):
 
 ```bash
 $ mysql -u root -p -h 192.168.121.54
