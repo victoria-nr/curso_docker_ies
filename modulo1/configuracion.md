@@ -34,7 +34,7 @@ Y para acceder podemos ejecutar:
 
 ```bash
 $ docker exec -it some-mariadb bash                                  
-root@9c3effd891e3:/# mysql -u root -p"$MYSQL_ROOT_PASSWORD" 
+root@9c3effd891e3:/# mariadb -u root -p"$MYSQL_ROOT_PASSWORD" 
 ...
 
 MariaDB [(none)]> 
@@ -42,7 +42,7 @@ MariaDB [(none)]>
 Otra forma de hacerlo sería:
 
 ```bash
-$ docker exec -it some-mariadb mysql -u root -p
+$ docker exec -it some-mariadb mariadb -u root -p
 Enter password: 
 ...
 MariaDB [(none)]> 
