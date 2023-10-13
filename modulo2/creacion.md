@@ -20,7 +20,7 @@ Pero podemos indicar el comando a ejecutar en la creación del contenedor:
 $ docker run ubuntu /bin/echo 'Hello world'
 ```
 
-Otro ejemplo: la imagen `httpd:2.4` ejecuta un servidor web por defecto, por lo tanto al crear el contenedor:
+Otro ejemplo: la imagen `httpd:2.4` ejecuta un servidor web por defecto, por lo tanto al crear el siguiente contenedor apache se estará ejecutando.
 
 ```bash
 $ docker run -d --name my-apache-app -p 8080:80 httpd:2.4
