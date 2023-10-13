@@ -13,7 +13,7 @@ $ docker volume create miweb
 miweb
 ```
 
-A continuación creamos un contenedor con el volumen asociado, usando `--mount`, y creamos un fichero `index.html`:
+A continuación creamos un contenedor con el volumen asociado, usando `-v`, y creamos un fichero `index.html`:
 
 ```bash
 $ docker run -d --name my-apache-app -v miweb:/usr/local/apache2/htdocs -p 8080:80 httpd:2.4
@@ -35,7 +35,7 @@ $ docker run -d --name my-apache-app -v miweb:/usr/local/apache2/htdocs -p 8080:
 baa3511ca2227e30d90fa2b4b225e209889be4badff583ce58ac1feaa73d5d77
 ```
 
-Y podemos comprobar que no no se ha perdido la información (el fichero `index.html`):
+Y podemos comprobar que no se ha perdido la información (el fichero `index.html`):
 
 ```bash
 $ curl http://localhost:8080
