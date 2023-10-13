@@ -20,11 +20,11 @@ Si elegimos conseguir la persistencia usando volúmenes estamos haciendo que los
 
 * Para compartir datos entre contenedores. Simplemente tendrán que usar el mismo volumen.
 * Para copias de seguridad ya sea para que sean usadas posteriormente por otros contenedores o para mover esos volúmenes a otros hosts.
-* Cuando quiero almacenar los datos de mi contenedor no localmente si no en un proveedor cloud.
+* Cuando quiero almacenar los datos de mi contenedor no localmente sino en un proveedor cloud.
 
 ### Gestionando volúmenes
 
-Algunos comando útiles para trabajar con volúmenes docker:
+Algunos comandos útiles para trabajar con volúmenes docker:
 
 * **docker volume create**: Crea un volumen con el nombre indicado.
 * **docker volume rm**: Elimina el volumen indicado.
