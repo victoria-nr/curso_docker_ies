@@ -2,7 +2,7 @@
 
 ## Ejemplo: montando directorios usando bind mount
 
-En este caso vamos a crear un directorio en el sistema de archivo del host, donde vamos a crear un fichero `index.html`:
+En este caso vamos a crear un directorio en el sistema de archivos del host, donde vamos a crear un fichero `index.html`:
 
 ```bash
 $ mkdir web
