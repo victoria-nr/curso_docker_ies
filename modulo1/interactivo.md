@@ -24,7 +24,7 @@ contenedor1
 $ docker exec contenedor1 ls -al
 ```
 
-Con la orden `docker restart` reiniciamos el contenedor, lo paramos y lo iniciamos.
+Con la orden `docker stop` paramos el contenedor y con la orden `docker restart` reiniciamos el contenedor, es decir, lo paramos y lo iniciamos.
 
 Para mostrar información de un contenedor ejecutamos `docker inspect`:
 
