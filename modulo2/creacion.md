@@ -6,7 +6,7 @@ Si navegas un poco por las distintas imágenes que encuentras en el registro de 
 * Ejecutaremos contenedores que tengan servicios asociados (Apache, MySQL, Tomcat....).
 * Ejecutaremos contenedores que tengan servicios asociados y que tienen instalada alguna aplicación web (WordPress, Nextcloud,...)
 
-Todas las imágenes tiene definidas un proceso que se ejecuta por defecto, pero en la mayoría de los casos podemos indicar un proceso al crear un contenedor.
+Todas las imágenes tienen definidas un proceso que se ejecuta por defecto, pero en la mayoría de los casos podemos indicar un proceso al crear un contenedor.
 
 Por ejemplo en la imagen `ubuntu` el proceso pode defecto es `bash`, por lo tanto podemos ejecutar:
 
