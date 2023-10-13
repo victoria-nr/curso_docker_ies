@@ -8,10 +8,10 @@ Tenemos que hacer una diferenciación entre dos tipos de redes **bridge**:
 Esta red "bridge" por defecto, que es la usada por defecto por los contenedores, se diferencia en varios aspectos de las redes "bridge" que creamos nosotros. Estos aspectos son los siguientes:
 
 * Las redes que nosotros definamos proporcionan **resolución DNS** entre los contenedores.
-* Puedo **conectar en caliente** a los contenedores redes "bridge" definidas por el usuario.
+* Puedo **conectar en caliente** a los contenedores en redes "bridge" definidas por el usuario.
 * Al usar redes definidas por el usuario obtengo más **aislamiento** y **control**, ya que los contenedores necesarios de una aplicación no comparten la red con otros contenedores.
 
-En definitiva: **Es importante que nuestro contenedores en producción se estén ejecutando sobre una red definida por el usuario.**
+En definitiva: **Es importante que nuestros contenedores en producción se estén ejecutando sobre una red definida por el usuario.**
 
 Para gestionar las redes creadas por el usuario:
 
@@ -19,10 +19,10 @@ Para gestionar las redes creadas por el usuario:
 * **docker network create**: Creación de redes. Ejemplos:
     * `docker network create red1`
     * `docker network create -d bridge --subnet 172.24.0.0/16 --gateway 172.24.0.1 red2`
-* **docker network rm/prune**: Borrar redes. Teniendo en cuenta que no puedo borrar una red que tenga contenedores que la estén usando. deberé primero borrar los contenedores o desconectar la red.
+* **docker network rm/prune**: Borrar redes. Teniendo en cuenta que no puedo borrar una red que tenga contenedores que la estén usando. Deberé primero borrar los contenedores o desconectar la red.
 * **docker network inspect**: Nos da información de la red.
 
-Nota: **Cada red docker que creo crea un puente de red específico para cada red que podemos ver con `ip a`**:
+Nota: **Cada red docker que creo, crea un puente de red específico para cada red el cual podemos ver con `ip a`**:
 
 ![docker](img/bridge2.png)
 
@@ -101,7 +101,7 @@ Podemos conectar "en caliente" un contenedor a una nueva red con:
 ```
 docker network connect <red> <contenedor>
 ```
-Para desconectarla de una red podemos usar: `docker network disconnect`.
+Para desconectarlo de una red podemos usar: `docker network disconnect`.
 
 Tanto al crear un contenedor con el flag `--network`, como con la instrucción `docker network connect`, podemos usar algunos otros flags:
 
