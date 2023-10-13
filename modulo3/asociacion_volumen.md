@@ -1,6 +1,6 @@
 # Asociando almacenamiento a los contenedores: volúmenes Docker
 
-Veamos como puedo usar los volúmenes y los bind mounts en los contenedores. Aunque dos formas de asociar el almacenamiento al contenedor nosotros vamos a usar el flag `--volume` o `-v`.
+Veamos como puedo usar los volúmenes y los bind mounts en los contenedores. Aunque hay dos formas de asociar el almacenamiento al contenedor nosotros vamos a usar el flag `--volume` o `-v`.
 
 Si usamos imágenes de DockerHub, debemos leer la información que cada imagen nos proporciona en su página ya que esa información suele indicar cómo persistir los datos de esa imagen, ya sea con volúmenes o bind mounts, y cuáles son las carpetas importantes en caso de ser imágenes que contengan ciertos servicios (web, base de datos etc...)
 
