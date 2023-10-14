@@ -1,6 +1,6 @@
 # El fichero docker-compose.yml
 
-En el fichero `docker-compose.yml` vamos a definir el escenario. **El programa docker-compose se debe ejecutar en el directorio donde este ese fichero**. Por lo tanto tenderemos un directorio con un fichero `docker-compose.yml` para cada una las aplicaciones que queremos desplegar. Por ejemplo para la ejecución de la aplicación [Let's Chat](https://github.com/sdelements/lets-chat) podríamos tener un fichero `docker-compose.yml`, dentro de una carpeta, con el siguiente contenido:
+En el fichero `docker-compose.yml` vamos a definir el escenario. **El programa docker-compose se debe ejecutar en el directorio donde esté ese fichero**. Por lo tanto tenderemos un directorio con un fichero `docker-compose.yml` para cada una las aplicaciones que queremos desplegar. Por ejemplo para la ejecución de la aplicación [Let's Chat](https://github.com/sdelements/lets-chat) podríamos tener un fichero `docker-compose.yml`, dentro de una carpeta, con el siguiente contenido:
 
 ```yaml
 version: '3.1'
