@@ -60,5 +60,5 @@ Removing network letschat_default
 
 ---
 
-* [Almacenamiento con docker-compose](alamacenamiento.md)
+* [Almacenamiento con docker-compose](almacenamiento.md)
 
