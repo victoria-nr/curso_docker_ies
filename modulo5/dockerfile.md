@@ -16,17 +16,17 @@ Por todas estas razones, el método preferido para la creación de imágenes es 
 
 Un fichero `Dockerfile` es un conjunto de instrucciones que serán ejecutadas de forma secuencial para construir una nueva imagen docker. Cada una de estas instrucciones crea una nueva capa en la imagen que estamos creando. 
 
-Hay varias instrucción que podemos usar en la construcción de un `Dockerfile`, pero la estructura fundamental del fichero es:
+Hay varias instrucciones que podemos usar en la construcción de un `Dockerfile`, pero la estructura fundamental del fichero es:
 
 * Indicamos imagen base: FROM
 * Metadatos: LABEL
 * Instrucciones de construcción: RUN, COPY, ADD, WORKDIR
-* Configuración: Variable de entornos, usuarios, puertos: USER, EXPOSE, ENV
+* Configuración: Variables de entorno, usuarios, puertos: ENV, USER, EXPOSE
 * Instrucciones de arranque: CMD, ENTRYPOINT
 
 Veamos las principales instrucciones que podemos usar:
 
-* **FROM**: Sirve para especificar la imagen sobre la que voy a construir la mía. Ejemplo: `FROM php:7.4-apache`.
+* **FROM**: Sirve para especificar la imagen base sobre la que voy a construir la mía. Ejemplo: `FROM php:7.4-apache`.
 * **LABEL**: Sirve para añadir metadatos a la imagen mediante clave=valor. Ejemplo: `LABEL company=iesalixar`.
 * **COPY**: Para copiar ficheros desde mi equipo a la imagen. Esos ficheros deben estar en el mismo contexto (carpeta o repositorio). Su sintaxis es `COPY [--chown=<usuario>:<grupo>] src dest`. Por ejemplo: `COPY --chown=www-data:www-data myapp /var/www/html`.
 * **ADD**: Es similar a COPY pero tiene funcionalidades adicionales como especificar URLs  y tratar archivos comprimidos.
