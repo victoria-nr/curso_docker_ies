@@ -72,7 +72,7 @@
 					    
 					    foreach ($users as $user) {
 					        echo "<br>";
-					        echo $user->username . " " . $user->password;
+					        echo $user->username . " --> " . $user->password;
 					        echo "<br>";
 					    }
 					}
