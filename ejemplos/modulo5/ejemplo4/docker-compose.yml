@@ -2,7 +2,7 @@ version: '3.1'
 services:
   app:
     container_name: contenedor_php
-    image: josedom24/aplicacion_php
+    image: victorianr/aplicacion_php
     restart: always
     environment:
       DB_HOST: servidor_mysql
