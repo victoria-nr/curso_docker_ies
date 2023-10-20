@@ -72,5 +72,6 @@ Podemos acceder al fichero `info.php` para comprobar la versión de php que esta
 ![ejemplo2](img/ejemplo2_phpinfo2.png)
 
 ---
-
+<!--
 * [Ejemplo 3: Construcción de imágenes con una una aplicación Python](ejemplo3.md)
+-->
