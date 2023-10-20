@@ -17,7 +17,7 @@ EXPOSE 80
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 ```
 
-Al usar una imagen base `debian` tenemos que instalar los paquetes necesarios para tener el servidor web, php y las librerias necesarias. Eliminamos el A continuación añadiremos el contenido del directorio `app` al directorio `/var/www/html/` del contenedor. Hemos borrado el fichero `/var/www/html/index.html` para que no sea el que se muestre por defecto y finalmente indicamos el comando que se deberá ejecutar al crear un contenedor a partir de esta imagen: iniciamos el servidor web en segundo plano.
+Al usar una imagen base `debian` tenemos que instalar los paquetes necesarios para tener el servidor web, php y las librerias necesarias.  A continuación añadiremos el contenido del directorio `app` al directorio `/var/www/html/` del contenedor. Después, borramos el fichero `/var/www/html/index.html` para que no sea el que se muestre por defecto y finalmente indicamos el comando que se deberá ejecutar al crear un contenedor a partir de esta imagen: iniciamos el servidor web en segundo plano.
 
 Para crear la imagen ejecutamos:
 
