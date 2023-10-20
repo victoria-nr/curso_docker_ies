@@ -46,6 +46,6 @@ Curso sobre contenedores Docker.
 * [Distribución de imágenes](modulo5/distribucion.md)
 * [Ejemplo 1: Construcción de imágenes con una página estática](modulo5/ejemplo1.md)
 * [Ejemplo 2: Construcción de imágenes con una una aplicación PHP](modulo5/ejemplo2.md)
-* [Ejemplo 3: Construcción de imágenes con una una aplicación Python](modulo5/ejemplo3.md)
-* [Ejemplo 4: Construcción de imágenes configurables con variables de entorno](modulo5/ejemplo4.md)
+<!--* [Ejemplo 3: Construcción de imágenes con una una aplicación Python](modulo5/ejemplo3.md)-->
+* [Ejemplo 3: Construcción de imágenes configurables con variables de entorno](modulo5/ejemplo4.md)
 * [Ciclo de vida de las aplicaciones](modulo5/ciclo_vida.md)
