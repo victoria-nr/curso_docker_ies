@@ -69,7 +69,7 @@ El contenido de `Dockerfile` es:
 
 ```Dockerfile
 FROM debian
-MAINTAINER José Domingo Muñoz "josedom24@gmail.com"
+LABEL Victoria Nebot "victorianr@gmail.com"
 RUN apt-get update  && apt-get install -y  apache2 
 COPY index.html /var/www/html/
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
@@ -78,7 +78,7 @@ CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 Para crear la imagen uso el comando `docker build`, indicando el nombre de la nueva imagen (opción `-t`) y indicando el directorio contexto.
 
 ```bash
-$ docker build -t josedom24/myapache2:v2 .
+$ docker build -t victorianr/myapache2:v2 .
 ...
 ```
 > Nota: Pongo como directorio el `.` porque estoy ejecutando esta instrucción dentro del directorio donde está el `Dockerfile`.
@@ -89,7 +89,7 @@ Una vez terminado, podríamos ver que hemos generado una nueva imagen:
 ```bash
 $ docker images
 REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
-josedom24/myapache2       v2                  3bd28de7ae88        43 seconds ago      195MB
+victorianr/myapache2       v2                  3bd28de7ae88        43 seconds ago      195MB
 ...
 ```
 
@@ -98,7 +98,7 @@ Si usamos el parámetro `--no-cache` en `docker build` haríamos la construcció
 En este caso al crear el contenedor a partir de esta imagen no hay que indicar el proceso que se va a ejecutar, porque ya se ha indicando en el fichero `Dockerfile`:
 
 ```bash
-$ docker run -d -p 8080:80 --name servidor_web josedom24/myapache2:v2 
+$ docker run -d -p 8080:80 --name servidor_web victorianr/myapache2:v2 
 ```            
 
 ## Buenas prácticas al crear Dockerfile
