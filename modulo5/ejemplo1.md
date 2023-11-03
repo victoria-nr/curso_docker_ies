@@ -26,7 +26,7 @@ Al usar una imagen base `debian` tenemos que instalar los paquetes necesarios pa
 Para crear la imagen ejecutamos:
 
 ```bash
-$ docker build -t josedom24/ejemplo1:v1 .
+$ docker build -t victorianr/ejemplo1:v1 .
 ```
 
 Comprobamos que la imagen se ha creado:
@@ -34,13 +34,13 @@ Comprobamos que la imagen se ha creado:
 ```bash
 $ docker images
 REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
-josedom24/ejemplo1     v1                  8c3275799063        1 minute ago      226MB
+victorianr/ejemplo1     v1                  8c3275799063        1 minute ago      226MB
 ```
 
 Y podemos crear un contenedor:
 
 ```bash
-$ docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v1
+$ docker run -d -p 80:80 --name ejemplo1 victorianr/ejemplo1:v1
 ```
 
 Y acceder con el navegador a nuestra página:
@@ -63,8 +63,8 @@ En este caso no necesitamos instalar nada, ya que la imagen tiene instalado el s
 De forma similar, crearíamos una imagen y un contenedor:
 
 ```bash
-$ docker build -t josedom24/ejemplo1:v2 .
-$ docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v2
+$ docker build -t victorianr/ejemplo1:v2 .
+$ docker run -d -p 80:80 --name ejemplo1 victorianr/ejemplo1:v2
 ```
 
 ## Versión 3: Desde una imagen con nginx
@@ -80,8 +80,8 @@ EXPOSE 80
 De forma similar, crearíamos una imagen y un contenedor:
 
 ```bash
-$ docker build -t josedom24/ejemplo1:v3 .
-$ docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v3
+$ docker build -t victorianr/ejemplo1:v3 .
+$ docker run -d -p 80:80 --name ejemplo1 victorianr/ejemplo1:v3
 ```
 
 ---
