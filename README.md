@@ -30,11 +30,11 @@ Curso sobre contenedores Docker.
 * [Ejemplo 3: Despliegue de Wordpress + mariadb](modulo3/wordpress.md)
 * [Ejemplo 4: Despliegue de tomcat + nginx](modulo3/tomcat.md)
 
-## 4. Creando escenarios multicontenedor con docker-compose 
-* [Creando escenarios multicontenedor con docker-compose](modulo4/instalacion.md)
-* [El fichero docker-compose.yml](modulo4/docker-compose.md)
-* [El comando docker-compose](modulo4/comando.md)
-* [Almacenamiento con docker-compose](modulo4/almacenamiento.md)
+## 4. Creando escenarios multicontenedor con Docker Compose 
+* [Creando escenarios multicontenedor con Docker Compose](modulo4/instalacion.md)
+* [El fichero docker-compose.yaml](modulo4/docker-compose.md)
+* [El comando docker compose](modulo4/comando.md)
+* [Almacenamiento con docker compose](modulo4/almacenamiento.md)
 * [Ejemplo 1: Despliegue de la aplicación Guestbook](modulo4/guestbook.md)
 * [Ejemplo 2: Despliegue de la aplicación Temperaturas](modulo4/temperaturas.md)
 * [Ejemplo 3: Despliegue de Wordpress + mariadb](modulo4/wordpress.md)
@@ -46,7 +46,9 @@ Curso sobre contenedores Docker.
 * [Distribución de imágenes](modulo5/distribucion.md)
 * [Ejemplo 1: Construcción de imágenes con una página estática](modulo5/ejemplo1.md)
 * [Ejemplo 2: Construcción de imágenes con una una aplicación PHP](modulo5/ejemplo2.md)
-* [Ejemplo 3: Construcción de imágenes configurables con variables de entorno](modulo5/ejemplo4.md)
+* [Ejemplo 3: Construcción de imágenes con una una aplicación Python](modulo5/ejemplo3.md)
+* [Ejemplo 4: Construcción de imágenes configurables con variables de entorno](modulo5/ejemplo4.md)
+* [Ejemplo 5: Configuración de imágenes con una aplicación Java](modulo5/ejemplo5.md)
 * [Ciclo de vida de las aplicaciones](modulo5/ciclo_vida.md)
 
   <!--* [Ejemplo 3: Construcción de imágenes con una una aplicación Python](modulo5/ejemplo3.md)-->

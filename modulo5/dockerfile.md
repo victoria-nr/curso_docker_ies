@@ -14,7 +14,8 @@ Por todas estas razones, el método preferido para la creación de imágenes es 
 
 ## El fichero Dockerfile
 
-Un fichero `Dockerfile` es un conjunto de instrucciones que serán ejecutadas de forma secuencial para construir una nueva imagen docker. Cada una de estas instrucciones crea una nueva capa en la imagen que estamos creando. 
+Un fichero `Dockerfile` es un conjunto de instrucciones que serán ejecutadas de forma secuencial para construir una nueva imagen docker. 
+Las instrucciones que cambian el sistema de fichero crearán **una nueva capa**.
 
 Hay varias instrucciones que podemos usar en la construcción de un `Dockerfile`, pero la estructura fundamental del fichero es:
 
@@ -43,7 +44,7 @@ Para una descripción completa sobre el fichero `Dockerfile`, puedes acceder a l
 
 ## Construyendo imágenes con docker build
 
-El comando `docker build` construye la nueva imagen leyendo las instrucciones del fichero `Dockerfile` y la información de un **entorno**, que para nosotros va a ser un directorio (aunque también podemos guardar información, por ejemplo, en un repositorio git).
+El comando `docker build` construye la nueva imagen leyendo las instrucciones del fichero `Dockerfile` y la información de un **entorno**, que para nosotros va a ser un directorio.
 
 La creación de la imagen es ejecutada por el *docker engine*, que recibe toda la información del entorno, por lo tanto es recomendable guardar el `Dockerfile` en un directorio vacío y añadir los ficheros necesarios para la creación de la imagen. El comando `docker build` ejecuta las instrucciones de un `Dockerfile` línea por línea y va mostrando los resultados en pantalla.
 
@@ -57,7 +58,7 @@ Para terminar indicar que la creación de imágenes intermedias generadas por la
 
 ## Ejemplo de  Dockerfile
 
-Vamos a crear un directorio (**nuestro entorno**) donde vamos a crear un `Dockerfile` y un fichero `index.html`:
+Vamos a crear un directorio (a este directorio se le llama **contexto**) donde vamos a crear un `Dockerfile` y un fichero `index.html`:
 
 ```bash
 cd build
@@ -68,14 +69,15 @@ Dockerfile  index.html
 El contenido de `Dockerfile` es:
 
 ```Dockerfile
-FROM debian
+FROM debian:stable-slim
 LABEL Victoria Nebot "victorianr@gmail.com"
 RUN apt-get update  && apt-get install -y  apache2 
-COPY index.html /var/www/html/
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+WORKDIR /var/www/html
+COPY index.html .
+CMD apache2ctl -D FOREGROUND
 ```
 
-Para crear la imagen uso el comando `docker build`, indicando el nombre de la nueva imagen (opción `-t`) y indicando el directorio contexto.
+Para crear la imagen uso el comando `docker build`, indicando el nombre de la nueva imagen (opción `-t`) y indicando el directorio **contexto**.
 
 ```bash
 $ docker build -t victorianr/myapache2:v2 .
@@ -116,6 +118,7 @@ $ docker run -d -p 8080:80 --name servidor_web victorianr/myapache2:v2
     apache2 \
     php5
     ```
+* No utilizar la etiqueta `latest` al indicar la imagen base, ya que está va cambiando con el tiempo y si volvemos a crear la imagen dentro de un tiempo, es posible que estemos usando una imagen base diferente.
 ---
 
 * [Distribución de imágenes](distribucion.md)

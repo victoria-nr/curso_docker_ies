@@ -34,19 +34,21 @@ Utilizando un fichero Dockerfile definimos como vamos a crear nuestra imagen:
 El fichero `Dockerfile`:
 
 ```Dockerfile
-FROM debian
+# syntax=docker/dockerfile:1
+FROM debian:stable-slim
 RUN apt-get update -y && apt-get install -y \
                          apache2 \
                       && apt-get clean && rm -rf /var/lib/apt/lists/*
-ADD ./public_html /var/www/html/
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+COPY ./public_html /var/www/html/
+CMD apache2ctl -D FOREGROUND
 ```
 
 Podríamos usar una imagen base con apache2 ya instalado:
 
 ```Dockerfile
+# syntax=docker/dockerfile:1
 FROM httpd:2.4
-ADD ./public_html /usr/local/apache2/htdocs/
+COPY ./public_html /usr/local/apache2/htdocs/
 ```
 Creamos nuestra imagen, desde el directorio donde tenemos el `Dockerfile`, ejecutamos:
 
